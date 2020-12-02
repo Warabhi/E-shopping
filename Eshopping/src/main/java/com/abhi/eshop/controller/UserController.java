@@ -1,6 +1,7 @@
 package com.abhi.eshop.controller;
 
 import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 
@@ -29,7 +30,7 @@ public class UserController {
     }
     
     @PostMapping("/user")
-    public User createEmployee(@RequestBody User user) {
+    public User createUser(@RequestBody User user) {
         return userRepository.save(user);
     }
     
@@ -54,8 +55,8 @@ public class UserController {
         user.setState(userDetails.getState());
         user.setCountry(userDetails.getCountry());
         user.setZip(userDetails.getZip());
-        final User updatedEmployee = userRepository.save(user);
-        return ResponseEntity.ok(updatedEmployee);
+        final User updatedUser = userRepository.save(user);
+        return ResponseEntity.ok(updatedUser);
     }
 
 
