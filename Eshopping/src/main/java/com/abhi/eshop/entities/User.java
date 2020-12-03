@@ -21,16 +21,18 @@ public class User {
 	private String country;
 	private String mob;
 	private String email;
+	private String password;
 	
 	
-    public User() {
+    public User(int i, String string, String string2, String string3, String string4) {
     	  
     }
     
     
-	public User(String fname, String lname, String address, String city, String zip, String state,
-			String country, String mob, String email) {
+	public User(long id, String fname, String lname, String address, String city, String zip, String state,
+			String country, String mob, String email, String password) {
 		
+		this.id = id;
 		this.fname = fname;
 		this.lname = lname;
 		this.address = address;
@@ -40,6 +42,7 @@ public class User {
 		this.country = country;
 		this.mob = mob;
 		this.email = email;
+		this.setPassword(password);
 	}
 
     @Id
@@ -130,6 +133,17 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+
+	@Column(name = "userPassword", nullable = false)
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	
