@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user_table")
+@Table(name = "user_table1")
 public class User {
 	
 	private long id;
@@ -23,10 +23,18 @@ public class User {
 	private String email;
 	private String password;
 	
+	public User() {
+		
+	}
 	
-    public User(int i, String string, String string2, String string3, String string4) {
-    	  
-    }
+	
+//    public User(String email, String fname, String lname, String password) {
+//		this.email = email;
+//		this.fname = fname;
+//		this.lname = lname;
+//		this.password = password;
+//    	  
+//    }
     
     
 	public User(long id, String fname, String lname, String address, String city, String zip, String state,
@@ -42,7 +50,7 @@ public class User {
 		this.country = country;
 		this.mob = mob;
 		this.email = email;
-		this.setPassword(password);
+		this.password = password;
 	}
 
     @Id

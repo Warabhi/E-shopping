@@ -9,11 +9,11 @@ import com.abhi.eshop.entities.User;
 public interface UserRepository extends JpaRepository<User, String> {
 
 	User findById(Long userId);
-
-	User findByEmailAndPassword(String email, String password);
-
-	Integer getCountByEmail(String email);
-
-	Long create(String firstName, String lastName, String email, String password);
+//
+//	User findByEmailAndPassword(String email, String password);
+//
+//	Integer getCountByEmail(String email);
+//
+//	User create(String firstName, String lastName, String email, String password);
 
 }
